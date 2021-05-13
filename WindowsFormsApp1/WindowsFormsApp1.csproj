@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{412EE0BA-07A0-4339-8EE6-F85298965472}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Font_Size.cs" />
+    <Compile Include="Font_Color_Box.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Font_Color_Box.Designer.cs">
+      <DependentUpon>Font_Color_Box.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClipBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClipBoard.Designer.cs">
+      <DependentUpon>ClipBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internet.Designer.cs">
+      <DependentUpon>Internet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Font_Color_Box.resx">
+      <DependentUpon>Font_Color_Box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClipBoard.resx">
+      <DependentUpon>ClipBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internet.resx">
+      <DependentUpon>Internet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\Font_Color_Box.datasource" />
+    <None Include="Properties\DataSources\Font_Size.datasource" />
+    <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P20191006_013928792_06B7F1F9-DD6A-4403-A9B8-C14093C17D3A.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_italic_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-bold-button-of-letter-b-symbol-svg-png-icon-free-download-bold-ico-714x981.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toppng.com-the-icon-underline-consists-of-the-outline-of-a-capitalized-bold-italic-underline-icons-850x1214.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\align.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\037-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\020-left-alignment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\019-center-alignment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\018-align-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\017-justify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\028-bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-paste-clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\유튜브 아이콘.jpg" />
+    <None Include="Resources\다음 아이콘.png" />
+    <None Include="Resources\005-copy.png" />
+    <None Include="Resources\goback.png" />
+    <None Include="Resources\gofront.png" />
+    <Content Include="Resources\png-transparent-italic-type-computer-icons-font-others-miscellaneous-angle-text.png" />
+    <Content Include="Resources\underline_icon-icons.com_64727.png" />
+    <None Include="Resources\네이버 아이콘.png" />
+    <None Include="Resources\구글 아이콘.png" />
+    <Content Include="Resources\다운로드.png" />
+    <None Include="Resources\다운로드1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
