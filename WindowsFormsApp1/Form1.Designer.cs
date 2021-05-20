@@ -47,11 +47,11 @@ namespace WindowsFormsApp1
             this.NewTextBox = new System.Windows.Forms.PictureBox();
             this.FileSaveBox = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Bullet = new System.Windows.Forms.PictureBox();
+            this.Center_Align = new System.Windows.Forms.PictureBox();
+            this.Right_Align = new System.Windows.Forms.PictureBox();
+            this.Justify = new System.Windows.Forms.PictureBox();
+            this.Left_Align = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -101,11 +101,11 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.NewTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileSaveBox)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bullet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Center_Align)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Right_Align)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Justify)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Left_Align)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontSizeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fontColorBoxBindingSource)).BeginInit();
@@ -162,6 +162,8 @@ namespace WindowsFormsApp1
             this.Color.TabIndex = 7;
             this.Color.TabStop = false;
             this.Color.Click += new System.EventHandler(this.Color_Click);
+            this.Color.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Color_MouseDown);
+            this.Color.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Color_MouseUp);
             // 
             // comboBox1
             // 
@@ -238,6 +240,8 @@ namespace WindowsFormsApp1
             this.CopyBox.TabIndex = 4;
             this.CopyBox.TabStop = false;
             this.CopyBox.Click += new System.EventHandler(this.CopyBox_Click);
+            this.CopyBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CopyBox_MouseDown);
+            this.CopyBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CopyBox_MouseUp);
             // 
             // PasteBox
             // 
@@ -250,6 +254,8 @@ namespace WindowsFormsApp1
             this.PasteBox.TabIndex = 3;
             this.PasteBox.TabStop = false;
             this.PasteBox.Click += new System.EventHandler(this.PasteBox_Click);
+            this.PasteBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PasteBox_MouseDown);
+            this.PasteBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PasteBox_MouseUp);
             // 
             // FileLoadBox
             // 
@@ -262,6 +268,8 @@ namespace WindowsFormsApp1
             this.FileLoadBox.TabIndex = 2;
             this.FileLoadBox.TabStop = false;
             this.FileLoadBox.Click += new System.EventHandler(this.FileLoadBox_Click);
+            this.FileLoadBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FileLoadBox_MouseDown);
+            this.FileLoadBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FileLoadBox_MouseUp);
             // 
             // NewTextBox
             // 
@@ -274,6 +282,8 @@ namespace WindowsFormsApp1
             this.NewTextBox.TabIndex = 1;
             this.NewTextBox.TabStop = false;
             this.NewTextBox.Click += new System.EventHandler(this.NewTextBox_Click);
+            this.NewTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NewTextBox_MouseDown);
+            this.NewTextBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NewTextBox_MouseUp);
             // 
             // FileSaveBox
             // 
@@ -286,15 +296,17 @@ namespace WindowsFormsApp1
             this.FileSaveBox.TabIndex = 0;
             this.FileSaveBox.TabStop = false;
             this.FileSaveBox.Click += new System.EventHandler(this.FileSaveBox_Click);
+            this.FileSaveBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FileSaveBox_MouseDown);
+            this.FileSaveBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FileSaveBox_MouseUp);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.pictureBox8);
-            this.groupBox3.Controls.Add(this.pictureBox7);
-            this.groupBox3.Controls.Add(this.pictureBox6);
-            this.groupBox3.Controls.Add(this.pictureBox5);
-            this.groupBox3.Controls.Add(this.pictureBox4);
+            this.groupBox3.Controls.Add(this.Bullet);
+            this.groupBox3.Controls.Add(this.Center_Align);
+            this.groupBox3.Controls.Add(this.Right_Align);
+            this.groupBox3.Controls.Add(this.Justify);
+            this.groupBox3.Controls.Add(this.Left_Align);
             this.groupBox3.Font = new System.Drawing.Font("굴림", 10F);
             this.groupBox3.Location = new System.Drawing.Point(510, 49);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -305,73 +317,65 @@ namespace WindowsFormsApp1
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "단락";
             // 
-            // pictureBox8
+            // Bullet
             // 
-            this.pictureBox8.Image = global::WindowsFormsApp1.Properties.Resources.list_2;
-            this.pictureBox8.Location = new System.Drawing.Point(6, 26);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(26, 31);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 12;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.Bullet.Image = global::WindowsFormsApp1.Properties.Resources.list_2;
+            this.Bullet.Location = new System.Drawing.Point(6, 26);
+            this.Bullet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Bullet.Name = "Bullet";
+            this.Bullet.Size = new System.Drawing.Size(26, 31);
+            this.Bullet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Bullet.TabIndex = 12;
+            this.Bullet.TabStop = false;
+            this.Bullet.Click += new System.EventHandler(this.Bullet_Click);
             // 
-            // pictureBox7
+            // Center_Align
             // 
-            this.pictureBox7.Image = global::WindowsFormsApp1.Properties.Resources._019_center_alignment;
-            this.pictureBox7.Location = new System.Drawing.Point(38, 62);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(26, 31);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.CenterAlign_Click);
-            this.pictureBox7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox7_MouseDown);
-            this.pictureBox7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox7_MouseUp);
+            this.Center_Align.Image = global::WindowsFormsApp1.Properties.Resources._019_center_alignment;
+            this.Center_Align.Location = new System.Drawing.Point(38, 62);
+            this.Center_Align.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Center_Align.Name = "Center_Align";
+            this.Center_Align.Size = new System.Drawing.Size(26, 31);
+            this.Center_Align.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Center_Align.TabIndex = 11;
+            this.Center_Align.TabStop = false;
+            this.Center_Align.Click += new System.EventHandler(this.CenterAlign_Click);
             // 
-            // pictureBox6
+            // Right_Align
             // 
-            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources._018_align_right;
-            this.pictureBox6.Location = new System.Drawing.Point(70, 62);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(26, 31);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.RightAlign_Click);
-            this.pictureBox6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseDown);
-            this.pictureBox6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseUp);
+            this.Right_Align.Image = global::WindowsFormsApp1.Properties.Resources._018_align_right;
+            this.Right_Align.Location = new System.Drawing.Point(70, 62);
+            this.Right_Align.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Right_Align.Name = "Right_Align";
+            this.Right_Align.Size = new System.Drawing.Size(26, 31);
+            this.Right_Align.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Right_Align.TabIndex = 10;
+            this.Right_Align.TabStop = false;
+            this.Right_Align.Click += new System.EventHandler(this.RightAlign_Click);
             // 
-            // pictureBox5
+            // Justify
             // 
-            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources._017_justify;
-            this.pictureBox5.Location = new System.Drawing.Point(102, 62);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(26, 31);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.Justify_Click);
-            this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseDown);
-            this.pictureBox5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseUp);
+            this.Justify.Image = global::WindowsFormsApp1.Properties.Resources._017_justify;
+            this.Justify.Location = new System.Drawing.Point(102, 62);
+            this.Justify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Justify.Name = "Justify";
+            this.Justify.Size = new System.Drawing.Size(26, 31);
+            this.Justify.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Justify.TabIndex = 9;
+            this.Justify.TabStop = false;
+            this.Justify.Click += new System.EventHandler(this.Justify_Click);
             // 
-            // pictureBox4
+            // Left_Align
             // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources._020_left_alignment;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 62);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.LeftAlign_Click);
-            this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
-            this.pictureBox4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseUp);
+            this.Left_Align.Image = global::WindowsFormsApp1.Properties.Resources._020_left_alignment;
+            this.Left_Align.Location = new System.Drawing.Point(6, 62);
+            this.Left_Align.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Left_Align.Name = "Left_Align";
+            this.Left_Align.Size = new System.Drawing.Size(26, 31);
+            this.Left_Align.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Left_Align.TabIndex = 8;
+            this.Left_Align.TabStop = false;
+            this.Left_Align.Click += new System.EventHandler(this.LeftAlign_Click);
             // 
             // textBox1
             // 
@@ -697,11 +701,11 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.NewTextBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FileSaveBox)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bullet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Center_Align)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Right_Align)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Justify)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Left_Align)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontSizeBindingSource)).EndInit();
@@ -737,11 +741,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox NewTextBox;
         private System.Windows.Forms.PictureBox FileLoadBox;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox Center_Align;
+        private System.Windows.Forms.PictureBox Right_Align;
+        private System.Windows.Forms.PictureBox Justify;
+        private System.Windows.Forms.PictureBox Left_Align;
+        private System.Windows.Forms.PictureBox Bullet;
         private System.Windows.Forms.PictureBox PasteBox;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

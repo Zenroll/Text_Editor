@@ -375,18 +375,18 @@ namespace WindowsFormsApp1
 
         //글 머리 기호
         int count = 0;
-        private void pictureBox8_Click(object sender, EventArgs e)
+        private void Bullet_Click(object sender, EventArgs e)
         {
             count++;
             if (count % 2 == 1)
             {
                 richTextBox1.SelectionBullet = true;
-                pictureBox8.BorderStyle = BorderStyle.Fixed3D;
+                Bullet.BorderStyle = BorderStyle.Fixed3D;
             }
             else
             {
                 richTextBox1.SelectionBullet = false;
-                pictureBox8.BorderStyle = BorderStyle.None;
+                Bullet.BorderStyle = BorderStyle.None;
             }
         }
 
@@ -434,11 +434,11 @@ namespace WindowsFormsApp1
             toolTip1.SetToolTip(Underline, "밑줄\nCtrl+B");
             toolTip1.SetToolTip(Color, "글자 색\nCtrl+Shift+C");
             //단락
-            toolTip1.SetToolTip(pictureBox8, "글 머리 기호");
-            toolTip1.SetToolTip(pictureBox4, "왼쪽 정렬\nCtrl+L");
-            toolTip1.SetToolTip(pictureBox7, "가운데 정렬\nCtrl+E");
-            toolTip1.SetToolTip(pictureBox6, "오른쪽 정렬\nCtrl+R");
-            toolTip1.SetToolTip(pictureBox5, "양쪽 정렬\nCtrl+Shift+J");
+            toolTip1.SetToolTip(Bullet, "글 머리 기호");
+            toolTip1.SetToolTip(Left_Align, "왼쪽 정렬\nCtrl+L");
+            toolTip1.SetToolTip(Center_Align, "가운데 정렬\nCtrl+E");
+            toolTip1.SetToolTip(Right_Align, "오른쪽 정렬\nCtrl+R");
+            toolTip1.SetToolTip(Justify, "양쪽 정렬\nCtrl+Shift+J");
         }
 
 
@@ -503,44 +503,43 @@ namespace WindowsFormsApp1
             Color.BorderStyle = BorderStyle.None;
         }
 
-        //단락 pictureBox 번호 순서 : 4765
-        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
+        private void Left_Align_MouseUp(object sender, MouseEventArgs e)
         {
-            pictureBox4.BorderStyle = BorderStyle.None;
+            Left_Align.BorderStyle = BorderStyle.None;
         }
-        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        private void Left_Align_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox4.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void pictureBox7_MouseUp(object sender, MouseEventArgs e)
-        {
-            pictureBox7.BorderStyle = BorderStyle.None;
+            Left_Align.BorderStyle = BorderStyle.Fixed3D;
         }
 
-        private void pictureBox7_MouseDown(object sender, MouseEventArgs e)
+        private void Center_Align_MouseUp(object sender, MouseEventArgs e)
         {
-            pictureBox7.BorderStyle = BorderStyle.Fixed3D;
+            Center_Align.BorderStyle = BorderStyle.None;
         }
 
-        private void pictureBox6_MouseUp(object sender, MouseEventArgs e)
+        private void Center_Align_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox6.BorderStyle = BorderStyle.None;
+            Center_Align.BorderStyle = BorderStyle.Fixed3D;
         }
 
-        private void pictureBox6_MouseDown(object sender, MouseEventArgs e)
+        private void Right_Align_MouseUp(object sender, MouseEventArgs e)
         {
-            pictureBox6.BorderStyle = BorderStyle.Fixed3D;
+            Right_Align.BorderStyle = BorderStyle.None;
         }
 
-        private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
+        private void Right_Align_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox5.BorderStyle = BorderStyle.None;
+            Right_Align.BorderStyle = BorderStyle.Fixed3D;
         }
 
-        private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
+        private void Justify_MouseUp(object sender, MouseEventArgs e)
         {
-            pictureBox5.BorderStyle = BorderStyle.Fixed3D;
+            Justify.BorderStyle = BorderStyle.None;
+        }
+
+        private void Justify_MouseDown(object sender, MouseEventArgs e)
+        {
+            Justify.BorderStyle = BorderStyle.Fixed3D;
         }
 
         //글꼴 스크롤 바
@@ -554,7 +553,6 @@ namespace WindowsFormsApp1
             toolTip1.SetToolTip(vScrollBar1, vScrollBar1.Value.ToString());
         }
 
-     
     }
 }
        
