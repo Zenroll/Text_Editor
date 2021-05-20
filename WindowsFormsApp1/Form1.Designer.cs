@@ -161,6 +161,7 @@ namespace WindowsFormsApp1
             this.Color.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Color.TabIndex = 7;
             this.Color.TabStop = false;
+            this.Color.Click += new System.EventHandler(this.Color_Click);
             // 
             // comboBox1
             // 
@@ -314,7 +315,7 @@ namespace WindowsFormsApp1
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 12;
             this.pictureBox8.TabStop = false;
-          
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox7
             // 
@@ -586,6 +587,7 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.Keys.C)));
             this.글꼴색ToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.글꼴색ToolStripMenuItem.Text = "글꼴 색";
+            this.글꼴색ToolStripMenuItem.Click += new System.EventHandler(this.Color_Click);
             // 
             // toolStripDropDownButton3
             // 

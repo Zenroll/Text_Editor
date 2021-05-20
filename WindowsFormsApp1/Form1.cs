@@ -262,7 +262,19 @@ namespace WindowsFormsApp1
             }
         }
 
-        
+        //글자 색 변경
+        private void Color_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog1 = new ColorDialog();
+
+            colorDialog1.Color = richTextBox1.SelectionColor;
+
+            if (colorDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK &&
+               colorDialog1.Color != richTextBox1.SelectionColor)
+            {
+                richTextBox1.SelectionColor = colorDialog1.Color;
+            }
+        }
 
 
 
@@ -361,15 +373,22 @@ namespace WindowsFormsApp1
             fo = FontCombo1.SelectedItem.ToString();
         }
 
-       
-
-        private void pictureBox10_Click(object sender, EventArgs e)
+        //글 머리 기호
+        int count = 0;
+        private void pictureBox8_Click(object sender, EventArgs e)
         {
-
+            count++;
+            if (count % 2 == 1)
+            {
+                richTextBox1.SelectionBullet = true;
+                pictureBox8.BorderStyle = BorderStyle.Fixed3D;
+            }
+            else
+            {
+                richTextBox1.SelectionBullet = false;
+                pictureBox8.BorderStyle = BorderStyle.None;
+            }
         }
-
-        
-
 
         //정렬
         private void LeftAlign_Click(object sender, EventArgs e) //왼쪽 정렬
