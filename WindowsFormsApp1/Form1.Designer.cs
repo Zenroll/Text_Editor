@@ -406,6 +406,7 @@ namespace WindowsFormsApp1
             this.richTextBox1.Size = new System.Drawing.Size(727, 316);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // richTextBox2
             // 
@@ -655,6 +656,7 @@ namespace WindowsFormsApp1
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(93, 24);
             this.toolStripButton1.Text = "웹 브라우저";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // fontSizeBindingSource
             // 

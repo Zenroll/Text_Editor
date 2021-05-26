@@ -390,6 +390,14 @@ namespace WindowsFormsApp1
             }
         }
 
+        //글자 수 텍스트 박스
+        private void richTextBox1_TextChanged(object sender, EventArgs e) 
+        {
+            int a = richTextBox1.TextLength;
+            String b = a.ToString();
+            textBox1.Text = "글자 수 : " + b ;
+        }
+
         //정렬
         private void LeftAlign_Click(object sender, EventArgs e) //왼쪽 정렬
         {
@@ -551,6 +559,13 @@ namespace WindowsFormsApp1
             font_size = a;
             richTextBox1.SelectionFont = new Font(currentFont.Name, a, currentFont.Style);
             toolTip1.SetToolTip(vScrollBar1, vScrollBar1.Value.ToString());
+        }
+
+        //인터넷 브라우저
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Internet Internet = new Internet();
+            Internet.Show();
         }
 
     }
