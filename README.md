@@ -1,6 +1,7 @@
 C# Window Form 텍스트 에디터
 
-Visual Studio 2019
+개발에 사용한 툴 : Visual Studio 2019
+
 
 
 구현할 목록 :
