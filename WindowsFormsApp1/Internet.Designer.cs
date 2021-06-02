@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Internet));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.GoBack = new System.Windows.Forms.ToolStripButton();
@@ -40,6 +41,7 @@
             this.daum = new System.Windows.Forms.ToolStripButton();
             this.youtube = new System.Windows.Forms.ToolStripButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +115,7 @@
             this.naver.Name = "naver";
             this.naver.Size = new System.Drawing.Size(29, 24);
             this.naver.Text = "toolStripButton4";
+            this.naver.ToolTipText = "네이버";
             this.naver.Click += new System.EventHandler(this.naver_Click);
             // 
             // google
@@ -123,6 +126,7 @@
             this.google.Name = "google";
             this.google.Size = new System.Drawing.Size(29, 24);
             this.google.Text = "toolStripButton5";
+            this.google.ToolTipText = "구글";
             this.google.Click += new System.EventHandler(this.google_Click);
             // 
             // daum
@@ -133,6 +137,7 @@
             this.daum.Name = "daum";
             this.daum.Size = new System.Drawing.Size(29, 24);
             this.daum.Text = "toolStripButton1";
+            this.daum.ToolTipText = "다음";
             this.daum.Click += new System.EventHandler(this.daum_Click);
             // 
             // youtube
@@ -143,6 +148,7 @@
             this.youtube.Name = "youtube";
             this.youtube.Size = new System.Drawing.Size(29, 24);
             this.youtube.Text = "toolStripButton2";
+            this.youtube.ToolTipText = "유튜브";
             this.youtube.Click += new System.EventHandler(this.youtube_Click);
             // 
             // webBrowser1
@@ -183,5 +189,6 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.ToolStripButton daum;
         private System.Windows.Forms.ToolStripButton youtube;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

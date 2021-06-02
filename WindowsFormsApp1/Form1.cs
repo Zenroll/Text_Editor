@@ -419,6 +419,13 @@ namespace WindowsFormsApp1
             richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
         }
 
+        //사전
+        private void Dictionary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.LinkVisited = true;
+
+            System.Diagnostics.Process.Start("https://terms.naver.com/search.nhn?query=" + textBox2.Text);
+        }
 
 
         //복사목록 내용 복사

@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
 
         private void daum_Click(object sender, EventArgs e)
         {
-            webBrowser1.Navigate("https://daum.com");
+            webBrowser1.Navigate("https://daum.net");
         }
 
         private void youtube_Click(object sender, EventArgs e)
